@@ -1,7 +1,6 @@
 # ksher sdk python
 
 [![Python Package](https://github.com/ksher-solutions/ksher_sdk_python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/ksher-solutions/ksher_sdk_python/actions/workflows/python-publish.yml)
-
 [![Version](https://img.shields.io/pypi/v/ksher)](https://pypi.org/project/ksher/)
 
 Ksher payment SDK for Python. Please check document at http://api.ksher.net
@@ -59,17 +58,6 @@ you need to first init the payment object and that you can use it to;
 - Query Order Status
 - Refund the Order
 
-### Init Payment Object
-ksher have multiple api (apiType) such as;
-- redirect API is for Website and Mobile App integration.
-- settlement API is for checking the settlement information.
-- miniapp API is for WeChat and Alipay Mini-Program integration.
-- event API is for checking the events deliveried.
-- C scan B API is for C scan B(merchant present QR code) or Kiosk integration.
-- B scan C API is for B scan C(customer present QR code) or POS integration.
-
-you can read about it [Channel Payment Support Each country](http://api.ksher.net/KsherAPI/dev/account_wallet_support.html)
-
 #### Redirect API
 
 the default api is redirect api you can just init it like this
@@ -94,7 +82,7 @@ data = {
     "product_name":"",
     "channel_list":"promptpay,linepay,airpay,truemoney,atome,card,ktc_instal,kbank_instal,kcc_instal,kfc_instal,scb_easy,bbl_deeplink,baybank_deeplink,kplus,alipay,wechat,card,ktc_instal,kbank_instal,kcc_instal,kfc_instal"
 }
-data['mch_order_no'] = generate_order_id()
+data['mch_order_no'] = "HelloWebsite"
 resp = payment_handle.gateway_pay(data)
 ```
 
@@ -118,6 +106,6 @@ data = {
     "channel": "promptpay",
     "notify_url": "http://www.baidu.com/api/gateway_pay/notify_url/"
 }
-data['mch_order_no'] = generate_order_id()
+data['mch_order_no'] = "HelloKiosk"
 resp = payment_handle.native_pay(data)
 ```
