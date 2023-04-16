@@ -1,4 +1,4 @@
-# ksher sdk python
+# Ksher SDK Python
 
 [![Python Package](https://github.com/ksher-solutions/ksher_sdk_python/actions/workflows/python-publish.yml/badge.svg)](https://github.com/ksher-solutions/ksher_sdk_python/actions/workflows/python-publish.yml)
 [![Version](https://img.shields.io/pypi/v/ksher)](https://pypi.org/project/ksher/)
@@ -28,7 +28,7 @@ there are two option two install this package;
 
 ### Option 1: Pip Install This package
 ```
-pip install ksherpay
+pip install ksher
 ```
 
 ### Option 2: Clone this repository
@@ -66,9 +66,9 @@ the default api is redirect api you can just init it like this
 ```python
 from ksher.ksher_pay_sdk import KsherPay
 
-appid=mch35000
-privatekey=/Users/yourpath/repo/ksher_sdk_python/mch_privkey.pem
-pubkey=/Users/yourpath/repo/ksher_sdk_python/ksher_pubkey.pem
+appid = "mch35000"
+privatekey = "/Users/yourpath/repo/ksher_sdk_python/mch_privkey.pem"
+pubkey = "/Users/yourpath/repo/ksher_sdk_python/ksher_pubkey.pem"
 
 payment_handle = KsherPay(appid, privatekey, pubkey)
 data = {
@@ -94,9 +94,9 @@ to use 'C_Scan_B API', you need to specified it when init the object
 ```python
 from ksher.ksher_pay_sdk import KsherPay
 
-appid=mch35000
-privatekey=/Users/yourpath/repo/ksher_sdk_python/mch_privkey.pem
-pubkey=/Users/yourpath/repo/ksher_sdk_python/ksher_pubkey.pem
+appid = "mch35000"
+privatekey = "/Users/yourpath/repo/ksher_sdk_python/mch_privkey.pem"
+pubkey = "/Users/yourpath/repo/ksher_sdk_python/ksher_pubkey.pem"
 
 payment_handle = KsherPay(appid, privatekey, pubkey)
 data = {
